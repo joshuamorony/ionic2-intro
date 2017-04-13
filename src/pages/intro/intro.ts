@@ -8,13 +8,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class Intro {
 
-  sliderOptions: any;
-
   constructor(public navCtrl: NavController) {
-  
-    this.sliderOptions = {
-      pager: true
-    };
 
   }
 
