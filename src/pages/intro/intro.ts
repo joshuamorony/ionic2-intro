@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-intro',
   templateUrl: 'intro.html'
 })
-export class IntroPage {
+export class Intro {
 
   sliderOptions: any;
 
@@ -18,12 +18,8 @@ export class IntroPage {
 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroPage');
-  }
-
   goToHome(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot('Tabs');
   }
 
 }

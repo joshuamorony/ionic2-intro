@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen } from 'ionic-native';
-import { TabsPage } from '../pages/tabs/tabs';
-import { IntroPage } from '../pages/intro/intro';
 import { LoadingController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
@@ -11,7 +8,7 @@ import { Storage } from '@ionic/storage';
 })
 export class MyApp {
 
-  rootPage: any = TabsPage;
+  rootPage: any = 'Tabs';
   loader: any;
 
   constructor(public platform: Platform, public loadingCtrl: LoadingController, public storage: Storage) {
@@ -23,9 +20,9 @@ export class MyApp {
       this.storage.get('introShown').then((result) => {
 
         if(result){
-          this.rootPage = TabsPage;
+          this.rootPage = 'Tabs';
         } else {
-          this.rootPage = IntroPage;
+          this.rootPage = 'Intro';
           this.storage.set('introShown', true);
         }
 
