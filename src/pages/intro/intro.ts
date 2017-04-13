@@ -1,29 +1,19 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-intro',
   templateUrl: 'intro.html'
 })
-export class IntroPage {
-
-  sliderOptions: any;
+export class Intro {
 
   constructor(public navCtrl: NavController) {
-  
-    this.sliderOptions = {
-      pager: true
-    };
 
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroPage');
   }
 
   goToHome(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot('Tabs');
   }
 
 }
